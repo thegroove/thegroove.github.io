@@ -1,0 +1,185 @@
+<html>
+<head>
+    <style>
+        html,table,body {
+            font-family: Verdana;
+            font-size: 1em;
+        }
+        /* strong {
+            
+            font-weight: bold;
+        } */
+        table, td {
+            border: 1px solid #CCCCCC;
+           
+        }
+        table {
+            border-collapse: collapse;
+        }
+        td,th {
+            padding: 8px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        th {
+            font-weight: bold;
+            color:#FFF;
+            text-align: left;
+            background-color: #585858;
+            border: 1px solid rgb(29, 29, 29);
+            border-bottom: 1px solid rgb(29, 29, 29);
+        }
+
+        .rnthl {
+            font-size: .9em;
+            font-weight: bold;
+            border-radius: 4px;
+            padding: 2px;
+            padding-left: 4px;
+            padding-right: 4px;
+            color: #FFF;
+        }
+
+        .rntcgreen {
+            background-color: #090;
+        }
+        .rntcorange {
+            background-color: #F90;
+        }
+
+        .rntcyellow {
+            background-color: #FC0;
+        }
+        .rntclblue {
+            background-color: #369;
+        }
+
+        .rntcblue {
+            background-color: #06C;
+        }
+
+        .rntcred {
+            background-color: #C33;
+        }
+
+        .rntcblack {
+            background-color: #000;
+            color: #FFF;
+        }
+        .rntcgrey {
+            background-color:#666;
+            color: #FFF;
+        }
+        .gpio {
+            text-align: right;
+            padding-left:4px;
+            padding-right: 14px;
+        }
+        .input,.output {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        ESP8266
+    </h1>
+    <table>
+        <tbody>
+            <tr>
+                <th>Label</th>
+                <th>GPIO</th>
+                <th>Input</th>
+                <th>Output</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td><strong>D0</strong></td>
+                <td class="gpio"><strong>16</strong></td>
+                <td><span class="rnthl rntcyellow">No interrupt</span></td>
+                <td class="output"><span class="rnthl rntcyellow">no PWM/I2C</span></td>
+                <td><span class="rnthl rntcorange">HIGH at boot</span> used to wake up from deep sleep</td>
+            </tr>
+            <tr>
+                <td><strong>D1</strong></td>
+                <td class="gpio"><strong>5</strong></td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+                <td>often used as <span class="rnthl rntclblue">SCL</span> (I2C)</td>
+            </tr>
+            <tr>
+                <td><strong>D2</strong></td>
+                <td class="gpio"><strong>4</strong></td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+                <td>often used as <span class="rnthl rntclblue">SDA</span> (I2C) </td>
+            </tr>
+            <tr>
+                <td><strong>D3</strong></td>
+                <td class="gpio"><strong>0</strong></td>
+                <td class="input"><span class="rnthl rntcyellow">Pulled up</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+                <td>connected to <span class="rnthl rntcblack">FLASH</span> button, boot fails if pulled <span class="rnthl rntcgrey">LOW</span></td>
+            </tr>
+            <tr>
+                <td><strong>D4</strong></td>
+                <td class="gpio"><strong>2</strong></td>
+                <td class="input"><span class="rnthl rntcyellow">Pulled up</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+                <td><span class="rnthl rntcorange">HIGH at boot</span> on-board LED, boot fails if
+                    pulled <span class="rnthl rntcgrey">LOW</span></td>
+            </tr>
+            <tr>
+                <td><strong>D5</strong></td>
+                <td class="gpio"><strong>14</strong></td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+                <td><span class="rnthl rntcblue">SPI</span> (SCLK)</td>
+            </tr>
+            <tr>
+                <td><strong>D6</strong></td>
+                <td class="gpio"><strong>12</strong></td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+                <td><span class="rnthl rntcblue">SPI</span> (MISO)</td>
+            </tr>
+            <tr>
+                <td><strong>D7</strong></td>
+                <td class="gpio"><strong>13</strong></td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+                <td><span class="rnthl rntcblue">SPI</span> (MOSI) </td>
+            </tr>
+            <tr>
+                <td><strong>D8</strong></td>
+                <td class="gpio"><strong>15</strong></td>
+                <td class="input"><span class="rnthl rntcblack">Pulled to gnd</span></td>
+                <td class="output"><span class="rnthl rntcyellow">OK</span></td>
+                <td><span class="rnthl rntcblue">SPI</span> (CS) Boot fails if pulled <span class="rnthl rntcorange">HIGH</span></td>
+            </tr>
+            <tr>
+                <td><strong>RX</strong></td>
+                <td class="gpio"><strong>3</strong></td>
+                <td class="input"><span class="rnthl rntcyellow">OK</span></td>
+                <td class="output"><span class="rnthl rntcred">RX</span></td>
+                <td><span class="rnthl rntcorange">HIGH at boot</span></td>
+            </tr>
+            <tr>
+                <td><strong>TX</strong></td>
+                <td class="gpio"><strong>1</strong></td>
+                <td class="input"><span class="rnthl rntcred">TX</span></td>
+                <td class="output"><span class="rnthl rntcyellow">OK</span></td>
+                <td><span class="rnthl rntcorange">HIGH at boot</span> debug output at boot, boot fails if pulled <span class="rnthl rntcgrey">LOW</span>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>A0</strong></td>
+                <td><strong>ADC0</strong></td>
+                <td class="input"><span class="rnthl rntcgreen">ADC</span></td>
+                <td class="output"><span class="rnthl rntcred">X</span></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

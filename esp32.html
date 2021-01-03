@@ -1,0 +1,300 @@
+<html>
+<head>
+    <style>
+        html,table,body {
+            font-family: Verdana;
+            font-size: 1em;
+        }
+        strong {
+            
+            font-weight: bold;
+        }
+        table, th, td {
+            border: 1pX solid #CCCCCC;
+           
+        }
+        table {
+            border-collapse: collapse;
+        }
+        #table_right {
+            margin-left: 50px;
+        }
+        td,th {
+            padding: 8pX;
+            padding-left: 10pX;
+            padding-right: 10pX;
+        }
+
+        th {
+            font-weight: bold;
+            font-size: .9em;
+            color:#FFF;
+            text-align: left;
+            background-color: #585858;
+            border: 1px solid rgb(29, 29, 29);
+            border-bottom: 1px solid rgb(29, 29, 29);
+        }
+
+        h1 {
+            font-size: 1.5em;
+        }
+        .rnthl {
+            font-size: .9em;
+            font-weight: bold;
+            border-radius: 4pX;
+            padding: 2pX;
+            padding-left: 4pX;
+            padding-right: 4pX;
+            color: #FFF;
+        }
+
+        .rntcgreen {
+            background-color: #090;
+        }
+        .rntcorange {
+            background-color: #F90;
+        }
+
+        .rntclblue {
+            background-color: #369;
+        }
+
+        .rntcblue {
+            background-color: #06C;
+        }
+
+        .rntcred {
+            background-color: #C33;
+        }
+        .rntcyellow {
+            background-color: #FC0;
+        }
+        .note {
+            font-size: .8em;
+        }
+        .input,.output {
+            text-align: center;
+        }
+        .gpio {
+            font-weight: bold;
+            text-align: right;
+            padding-left:4px;
+            padding-right: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        ESP32
+    </h1>
+    <table style="float: left;">
+        <tbody>
+            <tr>
+                <th>GPIO</th>
+                <th>Input</th>
+                <th>Output</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td class="gpio">0</td>
+                <td class="input"><span class="rnthl rntcyellow">pulled up</span></td>
+                <td class="output"><span class="rnthl rntcyellow">OK</span></td>
+                <td class="note"><span class="rnthl rntcorange">PWM at boot</span></td>
+            </tr>
+            <tr>
+                <td class="gpio">1</td>
+                <td class="input"><span class="rnthl rntcred">TX</span></td>
+                <td class="output"><span class="rnthl rntcyellow">OK</span></td>
+                <td class="note"><span class="rnthl rntclblue">debug info at boot</span></td>
+            </tr>
+            <tr>
+                <td class="gpio">2</td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="note">on-board LED</td>
+            </tr>
+            <tr>
+                <td class="gpio">3</td>
+                <td class="input"><span class="rnthl rntcyellow">OK</span></td>
+                <td class="output"><span class="rnthl rntcred">RX</span></td>
+                <td class="note"><span class="rnthl rntcorange">HIGH at boot</span></td>
+            </tr>
+            <tr>
+                <td class="gpio">4</td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="note"><span class="rnthl rntcorange">PWM at boot</span></td>
+            </tr>
+            <tr>
+                <td class="gpio">5</td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="note"></td>
+            </tr>
+            <tr>
+                <td class="gpio">6</td>
+                <td class="input"><span class="rnthl rntcred">X</span></td>
+                <td class="output"><span class="rnthl rntcred">X</span></td>
+                <td class="note">internal SPI flash</td>
+            </tr>
+            <tr>
+                <td class="gpio">7</td>
+                <td class="input"><span class="rnthl rntcred">X</span></td>
+                <td class="output"><span class="rnthl rntcred">X</span></td>
+                <td class="note">internal SPI flash</td>
+            </tr>
+            <tr>
+                <td class="gpio">8</td>
+                <td class="input"><span class="rnthl rntcred">X</span></td>
+                <td class="output"><span class="rnthl rntcred">X</span></td>
+                <td class="note">internal SPI flash</td>
+            </tr>
+            <tr>
+                <td class="gpio">9</td>
+                <td class="input"><span class="rnthl rntcred">X</span></td>
+                <td class="output"><span class="rnthl rntcred">X</span></td>
+                <td class="note">internal SPI flash</td>
+            </tr>
+            <tr>
+                <td class="gpio">10</td>
+                <td class="input"><span class="rnthl rntcred">X</span></td>
+                <td class="output"><span class="rnthl rntcred">X</span></td>
+                <td class="note">internal SPI flash</td>
+            </tr>
+            <tr>
+                <td class="gpio">11</td>
+                <td class="input"><span class="rnthl rntcred">X</span></td>
+                <td class="output"><span class="rnthl rntcred">X</span></td>
+                <td class="note">internal SPI flash</td>
+            </tr>
+            <tr>
+                <td class="gpio">12</td>
+                <td class="input"><span class="rnthl rntcyellow">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="note"><span class="rnthl rntcorange">no boot if pulled HIGH</span></td>
+            </tr>
+            <tr>
+                <td class="gpio">13</td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="note"></td>
+            </tr>
+        
+            <tr>
+                <td class="gpio">14</td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="note"><span class="rnthl rntcorange">PWM at boot</span></td>
+            </tr>
+            <tr>
+                <td class="gpio">15</td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="note"><span class="rnthl rntcorange">PWM at boot</span></td>
+            </tr>
+        </tbody>
+    </table>
+    <table id="table_right" style="float: left;">
+        <tbody>
+            <tr>
+                <th>GPIO</th>
+                <th>Input</th>
+                <th>Output</th>
+            </tr>
+            <tr>
+                <td class="gpio">16</td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+                
+            </tr>
+            <tr>
+                <td class="gpio">17</td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+                
+            </tr>
+            <tr>
+                <td class="gpio">18</td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+              
+            </tr>
+            <tr>
+                <td class="gpio">19</td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+               
+
+            <tr>
+                <td class="gpio">21</td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+               
+            </tr>
+            <tr>
+                <td class="gpio">22</td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+               
+            </tr>
+            <tr>
+                <td class="gpio">23</td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+                
+            </tr>
+            <tr>
+                <td class="gpio">25</td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+               
+            </tr>
+            <tr>
+                <td class="gpio">26</td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+                
+            </tr>
+            <tr>
+                <td class="gpio">27</td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+                
+            </tr>
+            <tr>
+                <td class="gpio">32</td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+                
+            </tr>
+            <tr>
+                <td class="gpio">33</td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcgreen">OK</span></td>
+                
+            </tr>
+         
+            <tr>
+                <td class="gpio">34</td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcred">X</span></td>
+            </tr>
+            <tr>
+                <td class="gpio">35</td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcred">X</span></td>
+            </tr>
+            <tr>
+                <td class="gpio">36</td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcred">X</span></td>
+            </tr>
+            <tr>
+                <td class="gpio">39</td>
+                <td class="input"><span class="rnthl rntcgreen">OK</span></td>
+                <td class="output"><span class="rnthl rntcred">X</span></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
